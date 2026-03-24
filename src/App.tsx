@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import {
   Sprout,
   Map,
@@ -7,11 +8,12 @@ import {
   Calculator,
   Maximize,
   Layers,
-  Home,
+  Home as HomeIcon,
   Phone,
   ArrowRight,
   Menu,
-  X
+  X,
+  ArrowLeft
 } from 'lucide-react';
 
 const StatCard = ({ icon: Icon, label, value, sub }: { icon: any, label: string, value: string, sub: string }) => (
@@ -25,7 +27,7 @@ const StatCard = ({ icon: Icon, label, value, sub }: { icon: any, label: string,
   </div>
 );
 
-const ModelCard = ({ title, desc, icon: Icon, image }: { title: string, desc: string, icon: any, image: string }) => (
+const ModelCard = ({ title, desc, icon: Icon, image, link }: { title: string, desc: string, icon: any, image: string, link: string }) => (
   <div className="glass-panel model-card">
     <div className="model-image-wrapper">
       <img src={image} alt={title} className="model-image" />
@@ -39,40 +41,79 @@ const ModelCard = ({ title, desc, icon: Icon, image }: { title: string, desc: st
     </div>
     <div className="model-content">
       <p className="model-desc">{desc}</p>
-      <button className="btn-text">
+      <Link to={link} onClick={() => window.scrollTo(0, 0)} className="btn-text">
         Explore Model <ArrowRight className="arrow-icon" />
-      </button>
+      </Link>
     </div>
   </div>
 );
 
-function App() {
-  const [acres, setAcres] = useState(5);
-  const [profit, setProfit] = useState(60);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+// --- New Model Pages ---
+const ModelPage = ({ title, desc, features, icon: Icon, image }: any) => {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+  return (
+    <main className="model-page">
+      <div className="container">
+        <Link to="/" className="btn-text model-page__back-link">
+          <ArrowLeft className="arrow-icon" /> Back to Home
+        </Link>
+        <div className="glass-panel model-page__card">
+          <div className="model-page__grid">
+            <div className="model-page__info">
+              <div className="model-page__badge">
+                <Icon className="model-page__badge-icon" />
+                <span className="model-page__badge-text">Toyadhi Model</span>
+              </div>
+              <h1 className="model-page__title">{title}</h1>
+              <p className="model-page__desc">
+                {desc}
+              </p>
+              <div className="model-page__features">
+                {features.map((f: string, i: number) => (
+                  <div key={i} className="model-page__feature">
+                    <CheckCircle className="model-page__feature-icon" />
+                    <span className="model-page__feature-text">{f}</span>
+                  </div>
+                ))}
+              </div>
+              <a href="https://cal.com/sayak-moulic/15min" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-large">
+                Discuss This Model With Us
+              </a>
+            </div>
+            <div className="model-page__visuals">
+              <div className="model-page__image-box">
+                <img src={image} alt={title} className="model-page__image" />
+                <div className="model-page__image-overlay">
+                  <p className="model-page__image-label">High Yield Setup</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+};
 
-  useEffect(() => {
-    // Basic linear projection for UX: 5 acres -> 60L over 3 years
-    const projection = (acres * 12); // Simple 12L per acre over cycle
-    setProfit(projection);
-  }, [acres]);
+// --- Navbar / Footer Layout Shell ---
+const Layout = ({ children }: { children: React.ReactNode }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="app-wrapper">
-      {/* Navigation */}
       <nav className="navbar">
         <div className="container nav-container glass-panel">
-          <div className="nav-brand">
+          <Link to="/" className="nav-brand">
             <div className="brand-icon-wrapper">
               <Sprout className="brand-icon" />
             </div>
             <span className="brand-name">Toyadhi</span>
-          </div>
+          </Link>
 
           <div className="nav-links">
-            <a href="#models" className="nav-link">Models</a>
-            <a href="#process" className="nav-link">Strategy</a>
-            <a href="#calculator" className="nav-link">Calculator</a>
+            <a href="/#models" className="nav-link">Models</a>
+            <a href="/#process" className="nav-link">Strategy</a>
+            <a href="/#calculator" className="nav-link">Calculator</a>
             <a href="https://cal.com/sayak-moulic/15min" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book Consultation</a>
           </div>
 
@@ -81,17 +122,73 @@ function App() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="mobile-menu glass-panel">
-            <a href="#models" className="mobile-link" onClick={() => setIsMenuOpen(false)}>Models</a>
-            <a href="#process" className="mobile-link" onClick={() => setIsMenuOpen(false)}>Strategy</a>
-            <a href="#calculator" className="mobile-link" onClick={() => setIsMenuOpen(false)}>Calculator</a>
+            <Link to="/" className="mobile-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
+            <a href="/#models" className="mobile-link" onClick={() => setIsMenuOpen(false)}>Models</a>
+            <a href="/#process" className="mobile-link" onClick={() => setIsMenuOpen(false)}>Strategy</a>
+            <a href="/#calculator" className="mobile-link" onClick={() => setIsMenuOpen(false)}>Calculator</a>
             <a href="https://cal.com/sayak-moulic/15min" target="_blank" rel="noopener noreferrer" className="btn btn-primary menu-btn">Book Consultation</a>
           </div>
         )}
       </nav>
 
+      {children}
+
+      <footer className="footer ">
+        <div className="container">
+          <div className="footer-grid">
+            <div className="footer-info">
+              <div className="footer-brand">
+                <div className="footer-brand-icon">
+                  <Sprout className="icon-small" />
+                </div>
+                <span className="brand-name">Toyadhi</span>
+              </div>
+              <h3 className="footer-title">Stop letting your land <br /><span className="highlight">sit idle.</span></h3>
+              <p className="footer-desc">Join other smart landowners across India. Let our agriculture experts help you turn your investment into a thriving 50-Lakh a year business.</p>
+              <div className="footer-contact">
+                <Phone className="highlight" />
+                <span className="contact-phone">+91 98XXX XXXXX</span>
+              </div>
+            </div>
+
+            <div className="glass-panel footer-cta-card">
+              <h4 className="footer-cta-title">Ready for A to Z Consulting?</h4>
+              <p className="footer-cta-desc">
+                Skip the back-and-forth emails. Schedule a direct 15-minute discovery call with our agriculture experts to immediately analyze your land's potential and ROI capacity.
+              </p>
+              <a href="https://cal.com/sayak-moulic/15min" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-full btn-large">
+                Book Your 15-Min Discovery Call
+              </a>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <p className="copyright">© {new Date().getFullYear()} Toyadhi Integrated Agriculture Consulting. All Rights Reserved.</p>
+            <div className="footer-links">
+              <Link to="/" className="footer-link">Privacy Policy</Link>
+              <Link to="/" className="footer-link">Terms of Service</Link>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+// --- Home Route ---
+const Home = () => {
+  const [acres, setAcres] = useState(5);
+  const [profit, setProfit] = useState(60);
+
+  useEffect(() => {
+    // Basic linear projection for UX: 5 acres -> 60L over 3 years
+    const projection = (acres * 12); // Simple 12L per acre over cycle
+    setProfit(projection);
+  }, [acres]);
+
+  return (
+    <>
       {/* Hero Section */}
       <header className="hero">
         <div className="hero-bg-wrapper">
@@ -174,12 +271,12 @@ function App() {
               </div>
             </div>
             <div className="story-image-wrapper">
-               <div className="story-image-backdrop" />
-               <img src="/src/assets/hero-bg.png" alt="Indian Land" className="story-image" />
-               <div className="story-stat-card glass-panel">
-                 <p className="story-stat-value">6,780+</p>
-                 <p className="story-stat-label">Acres optimized nationally compared to competitors</p>
-               </div>
+              <div className="story-image-backdrop" />
+              <img src="/src/assets/hero-bg.png" alt="Indian Land" className="story-image" />
+              <div className="story-stat-card glass-panel">
+                <p className="story-stat-value">6,780+</p>
+                <p className="story-stat-label">Acres optimized nationally compared to competitors</p>
+              </div>
             </div>
           </div>
         </div>
@@ -206,18 +303,21 @@ function App() {
               title="Integrated Farming"
               image="/src/assets/integrated-farming.png"
               icon={Layers}
+              link="/models/integrated-farming"
               desc="A holistic ecosystem combining horticulture, livestock, and aquaculture. Waste from one becomes nutrient for another."
             />
             <ModelCard
               title="Decentralized Nodes"
               image="/src/assets/hero-bg.png"
-              icon={Home}
+              icon={HomeIcon}
+              link="/models/decentralized-nodes"
               desc="Modular farming units that operate independently but link into a wider supply chain. Perfect for village clusters."
             />
             <ModelCard
               title="In-House Farming"
               image="/src/assets/inhouse-farming.png"
               icon={Maximize}
+              link="/models/in-house-farming"
               desc="High-density vertical farming and hydroponics within controlled environments. Maximum yield, minimum space."
             />
           </div>
@@ -308,48 +408,45 @@ function App() {
           </div>
         </div>
       </section>
+    </>
+  );
+};
 
-      {/* CTA Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-grid">
-            <div className="footer-info">
-              <div className="footer-brand">
-                <div className="footer-brand-icon">
-                  <Sprout className="icon-small" />
-                </div>
-                <span className="brand-name">Toyadhi</span>
-              </div>
-              <h3 className="footer-title">Stop letting your land <br /><span className="highlight">sit idle.</span></h3>
-              <p className="footer-desc">Join other smart landowners across India. Let our agriculture experts help you turn your investment into a thriving 50-Lakh a year business.</p>
-              <div className="footer-contact">
-                <Phone className="highlight" />
-                <span className="contact-phone">+91 98XXX XXXXX</span>
-              </div>
-            </div>
-
-            <div className="glass-panel footer-cta-card">
-              <h4 className="footer-cta-title">Ready for A to Z Consulting?</h4>
-              <p className="footer-cta-desc">
-                Skip the back-and-forth emails. Schedule a direct 15-minute discovery call with our agriculture experts to immediately analyze your land's potential and ROI capacity.
-              </p>
-              <a href="https://cal.com/sayak-moulic/15min" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-full btn-large">
-                Book Your 15-Min Discovery Call
-              </a>
-            </div>
-          </div>
-
-          <div className="footer-bottom">
-            <p className="copyright">© {new Date().getFullYear()} Toyadhi Integrated Agriculture Consulting. All Rights Reserved.</p>
-            <div className="footer-links">
-              <a href="#privacy" className="footer-link">Privacy Policy</a>
-              <a href="#terms" className="footer-link">Terms of Service</a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+export default function App() {
+  return (
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/models/integrated-farming" element={
+            <ModelPage
+              title="Integrated Farming"
+              desc="A holistic ecosystem combining horticulture, livestock, and aquaculture. Waste from one becomes nutrient for another, minimizing external inputs and maximizing diverse revenue streams across the seasons."
+              features={["High biodiversity and risk mitigation", "Circular waste-to-nutrient cycles", "Multi-layered crop production", "Sustainable livestock integration"]}
+              icon={Layers}
+              image="/src/assets/integrated-farming.png"
+            />
+          } />
+          <Route path="/models/decentralized-nodes" element={
+            <ModelPage
+              title="Decentralized Nodes"
+              desc="Modular farming units that operate independently but link into a wider cohesive supply chain. Perfect for village clusters looking to standardize high-quality output while sharing distribution logistics."
+              features={["Extremely scalable across fractured land parcels", "Shared supply chain infrastructure", "Lower initial capital barrier per node", "Standardized quality control protocols"]}
+              icon={HomeIcon}
+              image="/src/assets/hero-bg.png"
+            />
+          } />
+          <Route path="/models/in-house-farming" element={
+            <ModelPage
+              title="In-House Farming"
+              desc="High-density vertical farming and hydroponics within controlled environmental agriculture (CEA) setups. Maximum yield, minimum space, and completely insulated from unpredictable external weather."
+              features={["Zero pesticide and herbicide usage", "Up to 90% less water usage", "Continuous 365-day harvests", "Optimized climate and LED grow conditions"]}
+              icon={Maximize}
+              image="/src/assets/inhouse-farming.png"
+            />
+          } />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
-
-export default App;
