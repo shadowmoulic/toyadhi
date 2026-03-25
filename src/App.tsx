@@ -16,6 +16,10 @@ import {
   ArrowLeft
 } from 'lucide-react';
 
+import heroBg from './assets/hero-bg.png';
+import integratedFarming from './assets/integrated-farming.png';
+import inhouseFarming from './assets/inhouse-farming.png';
+
 const StatCard = ({ icon: Icon, label, value, sub }: { icon: any, label: string, value: string, sub: string }) => (
   <div className="glass-panel stat-card">
     <div className="stat-icon-wrapper">
@@ -193,7 +197,7 @@ const Home = () => {
       <header className="hero">
         <div className="hero-bg-wrapper">
           <img
-            src="/src/assets/hero-bg.png"
+            src={heroBg}
             className="hero-bg"
             alt="Farming"
           />
@@ -272,7 +276,7 @@ const Home = () => {
             </div>
             <div className="story-image-wrapper">
               <div className="story-image-backdrop" />
-              <img src="/src/assets/hero-bg.png" alt="Indian Land" className="story-image" />
+              <img src={heroBg} alt="Indian Land" className="story-image" />
               <div className="story-stat-card glass-panel">
                 <p className="story-stat-value">6,780+</p>
                 <p className="story-stat-label">Acres optimized nationally compared to competitors</p>
@@ -301,21 +305,21 @@ const Home = () => {
           <div className="models-grid">
             <ModelCard
               title="Integrated Farming"
-              image="/src/assets/integrated-farming.png"
+              image={integratedFarming}
               icon={Layers}
               link="/models/integrated-farming"
               desc="A holistic ecosystem combining horticulture, livestock, and aquaculture. Waste from one becomes nutrient for another."
             />
             <ModelCard
               title="Decentralized Nodes"
-              image="/src/assets/hero-bg.png"
+              image={heroBg}
               icon={HomeIcon}
               link="/models/decentralized-nodes"
               desc="Modular farming units that operate independently but link into a wider supply chain. Perfect for village clusters."
             />
             <ModelCard
               title="In-House Farming"
-              image="/src/assets/inhouse-farming.png"
+              image={inhouseFarming}
               icon={Maximize}
               link="/models/in-house-farming"
               desc="High-density vertical farming and hydroponics within controlled environments. Maximum yield, minimum space."
@@ -424,7 +428,7 @@ export default function App() {
               desc="A holistic ecosystem combining horticulture, livestock, and aquaculture. Waste from one becomes nutrient for another, minimizing external inputs and maximizing diverse revenue streams across the seasons."
               features={["High biodiversity and risk mitigation", "Circular waste-to-nutrient cycles", "Multi-layered crop production", "Sustainable livestock integration"]}
               icon={Layers}
-              image="/src/assets/integrated-farming.png"
+              image={integratedFarming}
             />
           } />
           <Route path="/models/decentralized-nodes" element={
@@ -433,7 +437,7 @@ export default function App() {
               desc="Modular farming units that operate independently but link into a wider cohesive supply chain. Perfect for village clusters looking to standardize high-quality output while sharing distribution logistics."
               features={["Extremely scalable across fractured land parcels", "Shared supply chain infrastructure", "Lower initial capital barrier per node", "Standardized quality control protocols"]}
               icon={HomeIcon}
-              image="/src/assets/hero-bg.png"
+              image={heroBg}
             />
           } />
           <Route path="/models/in-house-farming" element={
@@ -442,7 +446,7 @@ export default function App() {
               desc="High-density vertical farming and hydroponics within controlled environmental agriculture (CEA) setups. Maximum yield, minimum space, and completely insulated from unpredictable external weather."
               features={["Zero pesticide and herbicide usage", "Up to 90% less water usage", "Continuous 365-day harvests", "Optimized climate and LED grow conditions"]}
               icon={Maximize}
-              image="/src/assets/inhouse-farming.png"
+              image={inhouseFarming}
             />
           } />
         </Routes>
