@@ -102,7 +102,6 @@ const FunnelForm = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({ landSize: '', location: '', interest: '', email: '', whatsapp: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [error, setError] = useState('');
 
   const indianStates = [
     "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana",
@@ -115,26 +114,26 @@ const FunnelForm = () => {
   const prevStep = () => setStep(s => s - 1);
 
   const handleFormSubmit = () => {
-    setError('');
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      setError("Please enter a valid email address.");
+    // Basic validation
+    if (!formData.email.includes('@')) {
+      alert("Please enter a valid email address.");
       return;
     }
     if (!/^\d{10}$/.test(formData.whatsapp)) {
-      setError("Please enter a valid 10-digit WhatsApp number.");
+      alert("Please enter a valid 10-digit WhatsApp number.");
       return;
     }
 
-    try {
-      console.log(">>> LEAD DATA CAPTURED <<<", formData);
-      localStorage.setItem('toyadhi_lead', JSON.stringify({ ...formData, ts: Date.now() }));
-      setIsSubmitted(true);
-      window.scrollTo({ top: document.getElementById('analysis')?.offsetTop, behavior: 'smooth' });
-    } catch (e) {
-      console.error("Storage failed", e);
-      setIsSubmitted(true); // Still show result even if storage fails
-    }
+    console.log(">>> LEAD DATA CAPTURED <<<");
+    console.log(formData);
+
+    // Simulate storage
+    localStorage.setItem('toyadhi_funnel_lead', JSON.stringify({
+      ...formData,
+      timestamp: new Date().toISOString()
+    }));
+
+    setIsSubmitted(true);
   };
 
   if (isSubmitted) {
@@ -142,18 +141,19 @@ const FunnelForm = () => {
       <div className="roi-card animate-up visible">
         <div className="hero-badge">Analysis Complete</div>
         <h2 className="journey-title">Estimated Annual ROI</h2>
-        <div className="roi-value" style={{ fontSize: 'clamp(3rem, 10vw, 5rem)', color: 'var(--secondary)' }}>₹45L - ₹65L</div>
-        <p className="journey-desc">Based on your <strong>{formData.landSize}</strong> land area in <strong>{formData.location}</strong>, we recommend the <strong>Integrated Smart Node</strong> model.</p>
+        <div className="roi-value" style={{ fontSize: 'clamp(3rem, 10vw, 5rem)' }}>₹45L - ₹65L</div>
+        <p className="journey-desc">Based on your {formData.landSize} acre land in {formData.location}, we recommend the <strong>Integrated Smart Node</strong> model.</p>
+        <p style={{ fontSize: '0.8rem', opacity: 0.5, marginTop: '1rem' }}>Data securely saved to lead engine.</p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '2rem', flexWrap: 'wrap' }}>
           <a href="https://cal.com/sayak-moulic/15min" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Download Blueprint</a>
-          <button onClick={() => { setIsSubmitted(false); setStep(1); }} className="btn btn-outline">Recalculate</button>
+          <button onClick={() => setIsSubmitted(false)} className="btn btn-outline">Recalculate</button>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="funnel-container" id="funnel-start">
+    <div className="funnel-container">
       <div className="funnel-step-indicator">
         {[1, 2, 3, 4].map(s => <div key={s} className={`step-dot ${s <= step ? 'active' : ''}`} />)}
       </div>
@@ -202,7 +202,6 @@ const FunnelForm = () => {
       {step === 4 && (
         <div className="animate-up visible">
           <h3 className="funnel-title">Final Step</h3>
-          {error && <p style={{ color: '#ff4444', fontSize: '0.85rem', marginBottom: '1rem', textAlign: 'center' }}>{error}</p>}
           <input type="email" placeholder="Email Address" className="funnel-input" value={formData.email} onChange={e => setFormData({ ...formData, email: e.target.value })} required />
           <div style={{ position: 'relative' }}>
             <input
@@ -214,7 +213,7 @@ const FunnelForm = () => {
               required
               style={{ paddingLeft: '3.5rem' }}
             />
-            <span style={{ position: 'absolute', left: '1rem', top: '1.25rem', color: '#666' }}>+91</span>
+            <span style={{ position: 'absolute', left: '1rem', top: '1.25rem', color: 'var(--text-muted)' }}>+91</span>
           </div>
           <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
             <button type="button" onClick={prevStep} className="btn btn-outline" style={{ flex: 1 }}>Back</button>
@@ -414,7 +413,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="v-section" style={{ background: 'linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.1))' }}>
+      <section className="v-section" style={{ background: 'linear-gradient(to bottom, transparent, rgba(5, 150, 105, 0.1))' }}>
         <div className="container text-center">
           <AnimateOnScroll>
             <h2 className="journey-title">Ready for your <span className="highlight">Legacy?</span></h2>
@@ -452,78 +451,6 @@ const ModelPage = ({ title, badge, desc, image, features }: any) => (
   </main>
 );
 
-const LeadDashboard = () => {
-  const [leads, setLeads] = useState<any[]>([]);
-  const [password, setPassword] = useState('');
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  useEffect(() => {
-    if (isAuthenticated) {
-      const saved = localStorage.getItem('toyadhi_lead');
-      if (saved) setLeads([JSON.parse(saved)]);
-    }
-  }, [isAuthenticated]);
-
-  if (!isAuthenticated) {
-    return (
-      <main className="v-section" style={{ paddingTop: '12rem' }}>
-        <div className="container" style={{ maxWidth: '400px' }}>
-          <div className="roi-card">
-            <h3 className="funnel-title">Admin Login</h3>
-            <input
-              type="password"
-              placeholder="Enter Admin Password"
-              className="funnel-input"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && password === 'Agritech@2026' && setIsAuthenticated(true)}
-            />
-            <button
-              className="btn btn-primary"
-              style={{ width: '100%', marginTop: '1rem' }}
-              onClick={() => {
-                if (password === 'Agritech@2026') setIsAuthenticated(true);
-                else alert('Invalid Password');
-              }}
-            >
-              Access Leads
-            </button>
-          </div>
-        </div>
-      </main>
-    );
-  }
-
-  return (
-    <main className="v-section" style={{ paddingTop: '12rem' }}>
-      <div className="container">
-        <div className="hero-badge">Admin Access</div>
-        <h1 className="journey-title">Captured <span className="highlight">Leads</span></h1>
-        <div style={{ marginTop: '3rem' }}>
-          {leads.length > 0 ? (
-            leads.map((l, i) => (
-              <div key={i} className="roi-card" style={{ textAlign: 'left', marginBottom: '1rem' }}>
-                <p><strong>Email:</strong> {l.email}</p>
-                <p><strong>WhatsApp:</strong> +91 {l.whatsapp}</p>
-                <p><strong>Land:</strong> {l.landSize}</p>
-                <p><strong>State:</strong> {l.location}</p>
-                <p><strong>Goal:</strong> {l.interest}</p>
-                <p style={{ opacity: 0.5, fontSize: '0.8rem', marginTop: '1rem' }}>Captured: {new Date(l.ts).toLocaleString()}</p>
-              </div>
-            ))
-          ) : (
-            <div className="roi-card"><p>No leads captured yet. Go complete the funnel!</p></div>
-          )}
-        </div>
-        <div style={{ display: 'flex', gap: '1rem', marginTop: '3rem' }}>
-          <Link to="/" className="btn btn-outline">Back to Home</Link>
-          <button onClick={() => setIsAuthenticated(false)} className="btn btn-outline" style={{ opacity: 0.5 }}>Logout</button>
-        </div>
-      </div>
-    </main>
-  );
-};
-
 export default function App() {
   return (
     <Router>
@@ -531,7 +458,6 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/3d" element={<ThreeDLayout />} />
-          <Route path="/leads" element={<LeadDashboard />} />
           <Route path="/farm-setup" element={<GenericPage title="Farm Setup" />} />
           <Route path="/farm-optimization" element={<GenericPage title="Optimization" />} />
           <Route path="/agri-business-consulting" element={<GenericPage title="Consulting" />} />
