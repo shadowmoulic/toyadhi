@@ -1,0 +1,296 @@
+﻿Sample flow for the website (Not necessarily final): 
+
+
+HOME
+│
+├── Hero (Value Proposition + CTA)
+├── Key Problems We Solve
+├── Our Solutions (Quick Links)
+├── Impact Metrics
+├── Featured Projects
+└── Call to Action (Consultation)
+
+
+│
+├── ABOUT US
+│   ├── Vision & Mission
+│   ├── Leadership & Team
+│   ├── Infrastructure / Facilities
+│   └── Why Choose Us
+│
+├── SOLUTIONS  ⭐ (Core Page)
+│   │
+│   ├── Sustainable Farming Solutions
+│   │   ├── Integrated Farming
+│   │   ├── Organic / Natural Farming
+│   │   ├── Precision & Climate-Smart Agriculture
+│   │   └── Soil, Nutrient & Water Optimization
+│   │
+│   ├── Advanced Cultivation Systems
+│   │   ├── Greenhouse / Polyhouse
+│   │   ├── Hydroponics / Aeroponics / Vertical Farming
+│   │   └── Aquaponics Systems
+│   │
+│   ├── Integrated Production Systems
+│   │   ├── Mushroom / Apiculture / Sericulture
+│   │   ├── Horticulture & Medicinal Plants
+│   │   └── Aquaculture & Livestock Integration
+│   │
+│   ├── Smart Farming & Mechanization
+│   │   ├── Farm Machinery
+│   │   ├── Automation & IoT
+│   │   └── Robotics & Energy-efficient Systems
+│   │
+│   ├── Post-Harvest & Value Chain Solutions
+│   │   ├── Processing & Storage
+│   │   ├── Cold Chain Systems
+│   │   └── Packaging & Supply Chain
+│   │
+│   ├── Circular & Waste-to-Resource Systems
+│   │   ├── Composting & Biogas
+│   │   ├── Wastewater Reuse
+│   │   ├── Biochar & Nutrient Recycling
+│   │   └── Circular Bioeconomy
+│   │
+│   ├── Climate & Sustainability Solutions
+│   │   ├── Climate Adaptation
+│   │   ├── Carbon Footprint & LCA
+│   │   └── Risk Assessment
+│   │
+│   └── Agri-Business & Institutional Development
+│       ├── Agro-Tourism
+│       ├── Agri-Entrepreneurship
+│       ├── FPO Development
+│       └── Cooperative Systems
+│
+├── SERVICES
+│   │
+│   ├── Project Planning & Feasibility
+│   │   ├── Feasibility Reports
+│   │   ├── Detailed Project Reports (DPR)
+│   │   ├── Bankable DPR
+│   │   └── Decision Support DPR
+│   │
+│   ├── Technical Advisory & Decision Support
+│   ├── Resource Assessment & Diagnostics
+│   │   ├── Soil Testing
+│   │   ├── Water Quality Analysis
+│   │   └── Suitability Assessment
+│   │
+│   ├── Market Intelligence & Business Strategy
+│   ├── Financial & Institutional Facilitation
+│   │   ├── Subsidy Advisory
+│   │   ├── Bank Loan Liaisoning
+│   │   └── Financial Planning
+│   │
+│   ├── Project Execution & Implementation
+│   ├── Capacity Building & Training
+│   ├── Certification & Compliance
+│   └── Value Chain & Supply Chain Development
+│
+├── HOW WE WORK
+│   ├── Step 1: Consultation
+│   ├── Step 2: Feasibility & DPR
+│   ├── Step 3: Financial Linkage
+│   ├── Step 4: Implementation
+│   └── Step 5: Monitoring & Scaling
+│
+├── PROJECTS / CASE STUDIES ⭐
+│   ├── Project 1 (Problem → Solution → Impact)
+│   ├── Project 2
+│   ├── Project 3
+│   └── Sector-wise Case Studies
+│
+├── WHO WE WORK WITH
+│   ├── Farmers
+│   ├── Startups & Entrepreneurs
+│   ├── Corporates
+│   ├── Government Agencies
+│   └── NGOs / Institutions
+│
+├── INTEGRATED SOLUTIONS ⭐ (Differentiator Page)
+│   ├── Closed-loop Agri Systems
+│   ├── Water-Energy-Food Nexus
+│   ├── Circular Agri-Bio Ecosystems
+│   └── Smart Sustainable Farms
+│
+├── TRAINING & OUTREACH
+│   ├── Workshops
+│   ├── Farmer Training
+│   └── Skill Development Programs
+│
+├── INSIGHTS / NEWS
+│   ├── Blogs
+│   ├── Research Highlights
+│   └── Events & Media Coverage
+│
+└── CONTACT / GET CONSULTATION ⭐
+    ├── Inquiry Form
+    ├── Book Consultation
+    ├── WhatsApp Integration
+    └── Location & Contact Details
+
+
+
+
+
+
+Domain things
+  
+
+
+
+Services we provide
+  
+
+
+
+Domain things
+
+
+Demain
+
+
+Farming Bystems A ty
+
+
+Protected & Dolliras Cultivation
+
+
+Specialized Production Bystema
+
+
+Gouttent & Water Management
+
+
+Post-Harvest & V
+
+
+Farm Mechanization & Automation
+
+
+1. Sustainable Farming Solutions
+2. Advanced Cultivation Systems
+3. Integrated Production Systems
+4. Smart Farming & Mechanization
+5. Post-Harvest & Value Chain Solutions
+6. Circular & Waste-to-Resource Systems
+7. Climate & Sustainability Solutions
+8. Agri-Business & Institutional Development
+
+
+Agn Business
+
+
+Climate Resilience & Dustababity Assesamerd
+
+
+blogroted Farming, Natural Famang, Organs Farming, Pucan Pemang, Negre & Comat A
+
+
+Greenhouseyhouse, Ηγεμονίες, Ασήρ, Азаренков, Fogpontos, V
+
+
+Mushroom, Apkure, Berture, Hour, Meal Plants, Aquare & veskgra
+
+
+Farm Machinery, Robotics, mather Mochartation, Energy-eff
+
+
+Processing, Storage, Cold Chan, Packaging, Bupply Chan Bysteme
+
+
+Composting, Bogas, Nudent Reeting Wastewater House, CarBooney Bachar
+
+
+Agroforestry, Crebon Farming, Biodiversity Conservation
+
+
+Agro-Tutem, Agt Entrepreneurship
+
+
+Cimale Adaptation, LOA, Certion Footjatst, Flak Management
+
+
+Services we provide
+
+
+Service Domain
+
+
+Project Planning & Feasibility Services
+
+
+Technical Advisory & Decision Support
+
+
+Resource Assessment & Diagnostics
+
+
+Market Intelligence & Business Strategy
+
+
+Financial & Institutional Facilitation
+
+
+Project Execution & Implementation
+
+
+Capacity Building & Skill Development
+
+
+Certification & Compllance Services
+
+
+Farmer Institutional Development
+
+
+Value Chain & Supply Chain Development
+
+
+Components
+
+
+Feasibility Reports, Detalled Project Reports (DPR), Bankable DPR, Decision-Support DIR
+
+
+Real-time Agro Advisory, Technology Betection Advisory, Data-driven Decision Support
+
+
+Boll Testing, Water Quality Analysis, Soll Satability Assessment
+
+
+Market Analysis, Demand Estimation, Price Trend Analysis, Business Planning
+
+
+Subsidy Advisory, Bank Loan Liaisoning, Financial Planning Support
+
+
+DPR Implementation, Full Project Execution, Bystem Installation & Commissioning
+
+
+Farmer Training, Technical Workshops, Skill Development Programs
+
+
+Organic Certification, Quality Standards Compliance, Regulatory Approvals
+
+
+FPO Formation, FPO Brengthening, Cooperative Development
+
+
+Value Chain Mapping, Market Linkages, Aggregation Models, Logistics Plarvying
+
+
++
+
+
+8
+
+
+Y
+
+
+What
+
+
+ENG

@@ -1,0 +1,203 @@
+﻿WEBSITE PAGE PLAN (with priority)
+Priority
+	Page Title
+	Page Slug
+	P0
+	Home
+	/
+	P0
+	Farm Setup (End-to-End)
+	/farm-setup
+	P0
+	Farm Optimization (Increase ROI)
+	/farm-optimization
+	P0
+	Agri Business Consulting (DPR & Funding)
+	/agri-business-consulting
+	P0
+	Case Studies
+	/case-studies
+	P0
+	Free DPR / Smart Farm Blueprint
+	/free-dpr
+	P0
+	Get Consultation
+	/contact
+	________________
+
+
+P1 — Growth + Traffic Layer
+Priority
+	Page Title
+	Page Slug
+	P1
+	Hydroponics Cost in India
+	/hydroponics-cost-india
+	P1
+	Polyhouse Farming Profit per Acre
+	/polyhouse-farming-profit
+	P1
+	Best Farming Business Ideas in India
+	/farming-business-ideas
+	P1
+	Government Subsidies for Farming
+	/farming-subsidies-india
+	P1
+	Organic vs Hydroponics ROI
+	/organic-vs-hydroponics
+	P1
+	How We Work
+	/how-we-work
+	P1
+	Who We Work With
+	/who-we-work-with
+	________________
+
+
+P2 — Authority + Support
+Priority
+	Page Title
+	Page Slug
+	P2
+	About Us
+	/about
+	P2
+	Integrated Smart Farming Solutions
+	/integrated-solutions
+	P2
+	Training & Workshops
+	/training
+	P2
+	Insights / Blog
+	/blog
+	________________
+
+
+P3 — Optional / Later Expansion (only if needed)
+Priority
+	Page Title
+	Page Slug
+	P3
+	Sustainable Farming Solutions
+	/solutions/sustainable-farming
+	P3
+	Advanced Cultivation Systems
+	/solutions/advanced-cultivation
+	P3
+	Smart Farming & Automation
+	/solutions/smart-farming
+	P3
+	Post-Harvest & Value Chain
+	/solutions/post-harvest
+	P3
+	Circular Farming Systems
+	/solutions/circular-farming
+	P3
+	Climate & Sustainability
+	/solutions/climate-sustainability
+	P3
+	Agri Business Development
+	/solutions/agri-business
+	________________
+
+
+P0 — MONEY PAGES (highest impact)
+Page
+	Schema
+	Must-have SEO tech
+	Home
+	Organization + WebSite
+	Title: brand + core outcome
+H1 = clear value prop
+Internal links to all P0 pages
+	Farm Setup
+	Service
+	Add FAQ schema
+Strong H1: “Farm Setup Services in India”
+Conversion CTA above fold
+	Farm Optimization
+	Service
+	Use FAQ schema
+Include results keywords (increase yield, ROI)
+	Agri Business Consulting
+	Service
+	Add FAQ + optional HowTo (DPR steps)
+Include funding/subsidy keywords
+	Case Studies
+	ItemList + Article
+	Each case = structured (problem → result)
+Add internal links to services
+	Free DPR
+	WebPage + Offer
+	Minimal SEO, focus on conversion
+Fast load, no distractions
+	Contact
+	ContactPage
+	Add NAP (name, address, phone)
+Embed map
+WhatsApp click tracking
+	________________
+
+
+P1 — TRAFFIC PAGES (SEO goldmine)
+Page
+	Schema
+	Must-have SEO tech
+	Hydroponics Cost
+	Article + FAQ
+	Include numbers, tables
+Use “cost in India” variations
+	Polyhouse Profit
+	Article + FAQ
+	Add ROI examples
+Use “per acre profit” keywords
+	Farming Business Ideas
+	Article + ItemList
+	List format (10–15 ideas)
+Internal links to services
+	Farming Subsidies
+	Article + FAQ
+	State-wise info (huge boost)
+Keep updated
+	Organic vs Hydroponics
+	Article
+	Comparison tables
+Target “vs” keywords
+	How We Work
+	HowTo
+	Step-by-step schema
+Keep it simple
+	Who We Work With
+	WebPage
+	Segment sections (farmers, startups etc.)
+	________________
+
+
+P2 — AUTHORITY
+Page
+	Schema
+	Must-have SEO tech
+	About
+	Organization
+	Add founder, mission
+Trust signals
+	Integrated Solutions
+	Service
+	Internal linking hub
+	Training
+	Event (if workshops)
+	Add dates if real events
+	Blog
+	Blog
+	Proper category structure
+	________________
+
+
+P3 — OPTIONAL (later)
+Page
+	Schema
+	Must-have SEO tech
+	All /solutions/*
+	Service
+	Only if targeting keywords
+Otherwise skip
