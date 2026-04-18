@@ -1,0 +1,24 @@
+# TOYADHI AGRITECH - BRAND KIT (Tentative)
+
+## Color Palette
+- Primary Background: #070908 (Dark Obsidian)
+- Secondary / Action: #3B82F6 (High-Tech Blue)
+- Action Hover: #2563EB (Deep Blue)
+- Muted Text: #A1A1AA (Cool Gray)
+- UI Highlights: #059669 (Emerald Green - specifically for Success/ROI indicators)
+- Glass Effect: rgba(255, 255, 255, 0.03) with 20px blur
+
+## Typography
+- Main Sans: 'Outfit', 'Inter', sans-serif
+- Headings: Bold, clean, geometric
+- Spacing: Tight line-height (0.95) for H1, generous spacing for body text (1.6)
+
+## Design Principles
+- Cinematic Immersive: Heavy use of dark backgrounds and radial overlays.
+- ROI-Centric: Actionable buttons are high-contrast blue (#3B82F6).
+- Trust & Authority: Clean glassmorphic borders and rounded corners (8px for icons, 32px for sections).
+- Smart Modular: Components follow a modular "Node" logic.
+
+## Visual Identity
+- Logo: Sprout node in a rounded white tile.
+- Imagery: High-resolution agritech photography with brightness filter (0.6) and dark gradients.
