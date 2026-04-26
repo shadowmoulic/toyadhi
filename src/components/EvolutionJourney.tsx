@@ -10,12 +10,22 @@ export const EvolutionJourney = () => {
     useEffect(() => {
         const handleScroll = () => {
             if (!containerRef.current) return;
-            const rect = containerRef.current.getBoundingClientRect();
-            const scrollHeight = rect.height - window.innerHeight;
-            const scrollPercent = Math.min(Math.max(-rect.top / scrollHeight, 0), 1);
-            setStage(Math.floor(scrollPercent * 4.99));
+            const container = containerRef.current;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const containerRect = container.getBoundingClientRect();
+            const offsetTop = containerRect.top + scrollTop;
+            const height = container.offsetHeight;
+            const viewportHeight = window.innerHeight;
+
+            const scrollDistance = scrollTop - offsetTop;
+            const maxScroll = height - viewportHeight;
+
+            const scrollPercent = Math.min(Math.max(scrollDistance / maxScroll, 0), 1);
+            const nextStage = Math.floor(scrollPercent * 4.99);
+            setStage(nextStage);
         };
         window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll(); // Initial check
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
@@ -39,8 +49,8 @@ export const EvolutionJourney = () => {
                 <div className="container story-content-wrapper">
                     <div className="story-stage-text">
                         <span className="journey-badge" style={{ color: 'var(--primary)' }}>Step 0{stage + 1}</span>
-                        <h2 className="journey-title" style={{ fontSize: 'clamp(2.5rem, 8vw, 4.5rem)' }}>{stages[stage].title}</h2>
-                        <p className="journey-desc" style={{ fontSize: '1.4rem', color: 'var(--text-main)', maxWidth: '600px' }}>{stages[stage].desc}</p>
+                        <h2 className="journey-title" style={{ fontSize: 'clamp(2.5rem, 8vw, 4.5rem)' }}>{stages[stage]?.title}</h2>
+                        <p className="journey-desc" style={{ fontSize: '1.4rem', color: 'var(--text-main)', maxWidth: '600px' }}>{stages[stage]?.desc}</p>
                         <div className="funnel-step-indicator" style={{ width: '200px', marginTop: '3rem', display: 'flex', gap: '0.5rem' }}>
                             {[0, 1, 2, 3, 4].map(i => <div key={i} className={`step-dot ${i <= stage ? 'active' : ''}`} />)}
                         </div>

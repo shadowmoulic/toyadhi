@@ -51,9 +51,9 @@ export const FunnelForm = () => {
     }
 
     return (
-        <div style={{ position: 'relative' }}>
+        <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '32px' }}>
             {/* Form Backglow Aura */}
-            <svg className="aura-blob" style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '120%', height: '120%', color: 'var(--primary)' }} viewBox="0 0 200 200">
+            <svg className="aura-blob" style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '140%', height: '140%', color: 'var(--primary)' }} viewBox="0 0 200 200">
                 <circle cx="100" cy="100" r="80" fill="currentColor" fillOpacity="0.15" />
             </svg>
 

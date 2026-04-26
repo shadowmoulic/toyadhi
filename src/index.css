@@ -79,7 +79,6 @@ h2 {
 }
 
 .app-wrapper {
-  overflow-x: hidden;
   position: relative;
   width: 100%;
 }
@@ -90,7 +89,6 @@ h2 {
   margin: 0 auto;
   padding: 0 4rem;
   width: 100%;
-  overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
@@ -728,7 +726,6 @@ h2 {
   position: absolute;
   inset: 0;
   transition: opacity 1s ease;
-  z-index: -1;
 }
 
 .story-overlay {

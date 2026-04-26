@@ -52,7 +52,7 @@ export const Home = () => {
                                 Turn your idle land into a <span className="desktop-br" /> <span className="gradient-text">High-ROI Modern Farm.</span>
                             </h2>
                             <p className="hero-subtitle animate-up visible delay-1">
-                                We engineer high-yield agricultural ecosystems that generate <span className="highlight">₹50L+ in annual profit</span>. You own the land, we handle the future.
+                                We engineer high-yield agricultural ecosystems that generate <span className="highlight">₹50L+ in annual profit</span>. <br className="desktop-br" /> You own the land, we handle the future.
                             </p>
                             <div className="hero-actions animate-up visible delay-2">
                                 <Link to="/onboarding" className="btn btn-primary btn-large btn-glow">Generate Free Report <ChevronRight /></Link>

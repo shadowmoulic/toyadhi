@@ -6,8 +6,10 @@ export const AnimateOnScroll = ({ children, className = "" }: { children: React.
 
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => { if (entry.isIntersecting) setIsVisible(true); });
-        }, { threshold: 0.1 });
+            entries.forEach(entry => {
+                if (entry.isIntersecting) setIsVisible(true);
+            });
+        }, { threshold: 0.05, rootMargin: '0px 0px -50px 0px' });
         const current = domRef.current;
         if (current) observer.observe(current);
         return () => { if (current) observer.unobserve(current); };
