@@ -14,7 +14,7 @@ const ScrollProgress = () => {
         window.addEventListener('scroll', updateProgress);
         return () => window.removeEventListener('scroll', updateProgress);
     }, []);
-    return <div style={{ position: 'fixed', top: 0, left: 0, height: '3px', width: `${progress}%`, background: 'var(--secondary)', zIndex: 2000, transition: 'width 0.1s' }} />;
+    return <div style={{ position: 'fixed', top: 0, left: 0, height: '3px', width: `${progress}%`, background: 'var(--secondary)', zIndex: 2000, transition: 'width 0.1s', boxShadow: '0 0 10px var(--secondary)' }} />;
 };
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -36,7 +36,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 <div className="container">
                     <div className="nav-container glass">
                         <Link to="/" className="nav-brand">
-                            <img src={toyadhiLogo} alt="Toyadhi Logo" />
+                            <img src={toyadhiLogo} alt="Toyadhi - Integrated Agriculture Consulting & High-ROI Farming Models" title="Toyadhi: Smart Farming Solutions India" />
                         </Link>
                         <div className="nav-links">
                             <Link to="/farm-setup" className="nav-link">Setup</Link>
@@ -50,7 +50,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 </div>
                 {isMenuOpen && (
                     <div className="container">
-                        <div className="mobile-menu glass" style={{ position: 'absolute', top: '100%', left: '1rem', right: '1rem', padding: '2.5rem', borderRadius: '24px', display: 'flex', flexDirection: 'column', gap: '1.25rem', marginTop: '1rem', backgroundColor: 'rgba(7, 9, 8, 0.98)', border: '1px solid var(--glass-border)' }}>
+                        <div className="mobile-menu glass" style={{ position: 'absolute', top: '100%', left: '1rem', right: '1rem', padding: '2.5rem', borderRadius: '24px', display: 'flex', flexDirection: 'column', gap: '1.25rem', marginTop: '1rem', backgroundColor: 'var(--bg-card)', border: '1px solid var(--glass-border)', boxShadow: 'var(--shadow-lg)' }}>
                             <Link to="/" className="mobile-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
                             <Link to="/farm-setup" className="mobile-link" onClick={() => setIsMenuOpen(false)}>Farm Setup</Link>
                             <Link to="/farm-optimization" className="mobile-link" onClick={() => setIsMenuOpen(false)}>Optimization</Link>
@@ -67,11 +67,11 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 <div className="container">
                     <div className="footer-grid-extended">
                         <div className="footer-info">
-                            <img src={toyadhiLogo} alt="Toyadhi" style={{ height: '40px', borderRadius: '8px', background: 'white', padding: '2px', marginBottom: '2rem' }} />
+                            <img src={toyadhiLogo} alt="Toyadhi - Modern Agriculture Consulting" title="Toyadhi Agriculture" style={{ height: '40px', borderRadius: '8px', background: 'white', padding: '2px', marginBottom: '2rem' }} />
                             <h3 className="footer-title">Turn your land into <span className="highlight">wealth.</span></h3>
                             <p className="footer-desc">Toyadhi helps Indian land owners unlock high profitability through smart farming models.</p>
                             <div className="footer-contact"><MessageCircle className="highlight" size={20} /> <span>+91 98XXX XXXXX</span></div>
-                            <div className="footer-contact"><Mail className="highlight" size={20} /> <span>hello@toyadhi.in</span></div>
+                            <div className="footer-contact"><Mail className="highlight" size={20} /> <span>contact@toyadhi.com</span></div>
                         </div>
                         <div>
                             <h4 className="footer-column-title">Solutions</h4>
@@ -102,7 +102,9 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                         </div>
                     </div>
                     <div className="footer-bottom">
-                        <p className="copyright">© {new Date().getFullYear()} Toyadhi. Built for High-Performance.</p>
+                        <p className="copyright">
+                            © {new Date().getFullYear()} Toyadhi. Built for High-Performance by <a href="https://kgphustlehouse.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', fontWeight: 600 }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--secondary)'} onMouseOut={(e) => e.currentTarget.style.color = 'inherit'}>Sayak - KGP Hustle House</a>.
+                        </p>
                     </div>
                 </div>
             </footer>

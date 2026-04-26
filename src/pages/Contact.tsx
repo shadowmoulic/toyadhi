@@ -17,7 +17,7 @@ export const Contact = () => (
                         <p className="journey-desc">Our lead consultants are available for short-notice strategy sessions. We help you cut through the noise and focus on what builds profit.</p>
                         <div className="footer-info" style={{ marginTop: '4rem' }}>
                             <div className="footer-contact"><MessageCircle className="highlight" size={24} /> <span>+91 98XXX XXXXX (WhatsApp)</span></div>
-                            <div className="footer-contact" style={{ marginTop: '1.5rem' }}><Mail className="highlight" size={24} /> <span>hello@toyadhi.in</span></div>
+                            <div className="footer-contact" style={{ marginTop: '1.5rem' }}><Mail className="highlight" size={24} /> <span>contact@toyadhi.com</span></div>
                             <div style={{ marginTop: '4rem' }}>
                                 <p style={{ fontSize: '0.9rem', opacity: 0.6, fontStyle: 'italic' }}>"Serious inquiries only. We value your land's potential as much as our time."</p>
                             </div>

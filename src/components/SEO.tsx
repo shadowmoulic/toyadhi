@@ -12,6 +12,12 @@ export const SEO = ({ title, description }: { title: string; description: string
             newMeta.content = description;
             document.head.appendChild(newMeta);
         }
+
+        // Force favicon update
+        const favicon = document.querySelector('link[rel="icon"]');
+        if (favicon) {
+            favicon.setAttribute('href', `/favicon.png?v=${Date.now()}`);
+        }
     }, [title, description]);
     return null;
 };
