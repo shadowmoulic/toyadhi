@@ -38,15 +38,15 @@ export const HowWeWork = () => {
     return (
         <main style={{ paddingTop: '8rem' }}>
             <SEO
-                title="Our Process: From Land to High-Yield ROI | Toyadhi"
-                description="Discover the Toyadhi 5-step roadmap. We handle everything from land consultation and bank-ready DPRs to turnkey implementation and IoT-driven scaling."
+                title="How Farm Consultancy Works: What You Pay For and What You Get"
+                description="What does a farm consultancy actually do, and is it worth the fee? Here is a transparent look at how farm consultancy works, what to expect, and when it pays off."
             />
 
             <header className="v-section" style={{ paddingBottom: '4rem' }}>
                 <div className="container text-center">
                     <AnimateOnScroll>
                         <span className="journey-badge">The Roadmap</span>
-                        <h1 className="hero-title" style={{ fontSize: 'clamp(3rem, 8vw, 5rem)' }}>How We <span className="highlight">Work</span></h1>
+                        <h1 className="hero-title" style={{ fontSize: 'clamp(3rem, 8vw, 5rem)' }}>How Farm Consultancy Works: <span className="highlight">The Honest Breakdown Farmers Need</span></h1>
                         <p className="journey-desc" style={{ maxWidth: '800px', margin: '2rem auto' }}>
                             We don't just consult; we build legacies. Our process is engineered to move you from idle land to a high-performance agricultural asset in record time.
                         </p>

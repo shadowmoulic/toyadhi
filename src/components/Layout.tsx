@@ -50,7 +50,22 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 </div>
                 {isMenuOpen && (
                     <div className="container">
-                        <div className="mobile-menu glass" style={{ position: 'absolute', top: '100%', left: '1rem', right: '1rem', padding: '2.5rem', borderRadius: '24px', display: 'flex', flexDirection: 'column', gap: '1.25rem', marginTop: '1rem', backgroundColor: 'var(--bg-card)', border: '1px solid var(--glass-border)', boxShadow: 'var(--shadow-lg)' }}>
+                        <div className="mobile-menu glass" style={{
+                            position: 'absolute',
+                            top: '100%',
+                            left: '0.5rem',
+                            right: '0.5rem',
+                            padding: '1.5rem',
+                            borderRadius: '20px',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: '1rem',
+                            marginTop: '0.75rem',
+                            backgroundColor: 'var(--bg-card)',
+                            border: '1px solid var(--glass-border)',
+                            boxShadow: 'var(--shadow-lg)',
+                            zIndex: 1000
+                        }}>
                             <Link to="/" className="mobile-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
                             <Link to="/farm-setup" className="mobile-link" onClick={() => setIsMenuOpen(false)}>Farm Setup</Link>
                             <Link to="/farm-optimization" className="mobile-link" onClick={() => setIsMenuOpen(false)}>Optimization</Link>

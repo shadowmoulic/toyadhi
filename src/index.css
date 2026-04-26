@@ -78,16 +78,24 @@ h2 {
   border: 1px solid var(--glass-border);
 }
 
+.app-wrapper {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
 /* Containers */
 .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 4rem;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
   }
 }
 
