@@ -18,7 +18,6 @@ import { CaseStudies } from './pages/CaseStudies';
 import { FreeDPR } from './pages/FreeDPR';
 import { Contact } from './pages/Contact';
 import { OnboardingPage } from './pages/Onboarding';
-import { ThreeDLayout } from './pages/ThreeDLayout';
 import { HowWeWork } from './pages/HowWeWork';
 
 export default function App() {
@@ -28,7 +27,6 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/onboarding" element={<OnboardingPage />} />
-          <Route path="/3d" element={<ThreeDLayout />} />
           <Route path="/farm-setup" element={<FarmSetup />} />
           <Route path="/farm-optimization" element={<FarmOptimization />} />
           <Route path="/agri-business-consulting" element={<AgriConsulting />} />

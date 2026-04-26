@@ -1,0 +1,39 @@
+# Toyadhi: Modern Agriculture Consulting & High-ROI Farming Models
+
+Toyadhi is a premier Indian agriculture consultancy helping land owners, startups, and corporates unlock high profitability through smart, tech-driven, and sustainable farming models. We specialize in turning land into wealth by combining traditional wisdom with modern precision agriculture.
+
+## Core Solutions
+
+- **Onboarding (/onboarding)**: Personalized farm assessment and roadmap.
+- **Farm Setup (/farm-setup)**: End-to-end implementation of modern farming infrastructure including polyhouses, hydroponics, and integrated systems.
+- **Yield Optimization (/farm-optimization)**: IoT-driven and data-backed strategies to maximize output and slash waste.
+- **Agri-Business Consulting (/agri-business-consulting)**: Strategic advisory for large-scale agricultural projects and institutional development.
+- **Free DPR Builder (/free-dpr)**: A tool for building Detailed Project Reports for bankable agricultural ventures.
+
+## Specialized Farming Models
+
+- **Integrated Technical Farming (/models/technical-farming)**: Precision agriculture with full IoT control and smart tech integration.
+- **Organic Excellence (/models/organic-farming)**: APEDA certified, pesticide-free farming for domestic and global export.
+- **Aquaponics (/models/aquaponics)**: Efficient water recycling systems combining fish cultivation and plant growth.
+- **Animal Husbandry (/models/animal-husbandry)**: Smart livestock management with dairy optimization and bio-gas integration.
+- **Agro Tourism (/models/agro-tourism)**: Creating direct-to-consumer farm experiences and lifestyle ROI.
+
+## Insights & Resources
+
+- **Case Studies (/case-studies)**: Real-world results and impact metrics from our projects.
+- **Hydroponics Cost in India (/hydroponics-cost-india)**: Complete breakdown of setup and running costs for 2026.
+- **Polyhouse Farming Profit (/polyhouse-farming-profit)**: Realistic margin expectations and crop returns per acre.
+- **Farming Business Ideas (/farming-business-ideas)**: Profitable farming ventures backed by market demand in India for 2026.
+- **Integrated Solutions (/integrated-solutions)**: Closed-loop systems combining crops, livestock, and waste cycles.
+
+## Contact & Consultation
+
+- **Website**: https://www.toyadhi.com
+- **Strategy Call**: https://cal.com/sayak-moulic/15min
+- **Email**: contact@toyadhi.com
+- **Location**: Primary operations across India.
+
+## Technical Details
+
+- **Approach**: Cinematic Immersive, ROI-Centric, Smart Modular.
+- **Key Metrics**: Water savings, yield increase, ROI timelines, waste reduction.

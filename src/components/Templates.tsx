@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
+import { SEO } from './SEO';
 
 export const GenericPage = ({ title, h1, metaDesc }: { title: string, h1?: string, metaDesc?: string }) => (
     <main className="v-section" style={{ paddingTop: '12rem', minHeight: '80vh', position: 'relative', overflow: 'hidden' }}>
+        <SEO
+            title={`${title} | Toyadhi - Modern Agriculture Consulting`}
+            description={metaDesc || "Discover how Toyadhi is reshaping the agricultural landscape in India with data-driven models and sustainable engineering."}
+        />
         {/* Background Aura */}
         <svg className="aura-blob" style={{ top: '0', right: '0', width: '600px', height: '600px', color: 'var(--primary)', opacity: 0.1 }} viewBox="0 0 200 200">
             <circle cx="100" cy="100" r="80" fill="currentColor" />
@@ -27,6 +32,10 @@ export const GenericPage = ({ title, h1, metaDesc }: { title: string, h1?: strin
 
 export const ModelPage = ({ title, badge, desc, image, features }: any) => (
     <main className="v-section" style={{ paddingTop: '12rem' }}>
+        <SEO
+            title={`${title} Farming Model | Toyadhi`}
+            description={`${desc} Explore the ${title} model by Toyadhi, designed for high-ROI and sustainable agricultural success in India.`}
+        />
         <div className="container">
             <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 1fr', gap: '4rem', alignItems: 'center' }}>
                 <div>

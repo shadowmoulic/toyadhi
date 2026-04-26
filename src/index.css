@@ -644,6 +644,18 @@ h2 {
   }
 }
 
+.setup-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 991px) {
+  .setup-steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Funnel Enhancements */
 .funnel-container {
   background: var(--bg-card);

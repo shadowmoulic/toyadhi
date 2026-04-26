@@ -11,26 +11,26 @@ export const FarmSetup = () => (
         />
         <div className="container">
             <AnimateOnScroll>
-                <div className="text-center" style={{ marginBottom: '6rem' }}>
+                <div className="text-center">
                     <span className="journey-badge">End-to-End Build</span>
                     <h1 className="service-hero-title">Farm Setup Services in India: <span className="highlight">What Nobody Tells You Before You Start</span></h1>
                     <p className="journey-desc" style={{ maxWidth: '800px', margin: '0 auto 4rem' }}>Building a commercial farm is not just about buying seeds. It's about precision engineering, supply chain linkage, and climate resilience.</p>
                 </div>
-                <div className="responsive-grid" style={{ gap: '2rem' }}>
-                    <div className="roi-card">
+                <div className="setup-steps-grid">
+                    <div className="roi-card glass" style={{ padding: '3rem' }}>
                         <Zap className="highlight" size={32} />
-                        <h4 style={{ margin: '1.5rem 0' }}>Step 1: Resource Mapping</h4>
-                        <p className="journey-desc" style={{ fontSize: '1rem' }}>We conduct a 48-point check on your land, water, and soil before a single brick is laid.</p>
+                        <h4 style={{ color: 'var(--text-main)', marginTop: '1.5rem', marginBottom: '1.5rem' }}>Step 1: Resource Mapping</h4>
+                        <p className="journey-desc" style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>We conduct a 48-point check on your land, water, and soil before a single brick is laid.</p>
                     </div>
-                    <div className="roi-card">
+                    <div className="roi-card glass" style={{ padding: '3rem' }}>
                         <Wind className="highlight" size={32} />
-                        <h4 style={{ margin: '1.5rem 0' }}>Step 2: Smart Engineering</h4>
-                        <p className="journey-desc" style={{ fontSize: '1rem' }}>Custom polyhouse, hydroponic, or open-field clusters designed for your specific micro-climate.</p>
+                        <h4 style={{ color: 'var(--text-main)', marginTop: '1.5rem', marginBottom: '1.5rem' }}>Step 2: Smart Engineering</h4>
+                        <p className="journey-desc" style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>Custom polyhouse, hydroponic, or open-field clusters designed for your specific micro-climate.</p>
                     </div>
-                    <div className="roi-card">
+                    <div className="roi-card glass" style={{ padding: '3rem' }}>
                         <Shield className="highlight" size={32} />
-                        <h4 style={{ margin: '1.5rem 0' }}>Step 3: Market Integration</h4>
-                        <p className="journey-desc" style={{ fontSize: '1rem' }}>We don't just build the farm; we connect it to global and domestic export pathways from Day 0.</p>
+                        <h4 style={{ color: 'var(--text-main)', marginTop: '1.5rem', marginBottom: '1.5rem' }}>Step 3: Market Integration</h4>
+                        <p className="journey-desc" style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>We don't just build the farm; we connect it to global and domestic export pathways from Day 0.</p>
                     </div>
                 </div>
             </AnimateOnScroll>
