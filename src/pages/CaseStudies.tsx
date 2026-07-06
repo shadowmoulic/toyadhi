@@ -17,11 +17,9 @@ export const CaseStudies = () => (
                     <h1 className="service-hero-title">Farming Success Stories From India 2026: <span className="highlight">Real Farmers, Real Numbers</span></h1>
                     <p className="journey-desc">See how we turned underperforming land into high-yield yield machines across India.</p>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 450px))', justifyContent: 'center', gap: '2rem' }}>
                     {[
-                        { location: "Maharashtra", crop: "Exotic Vegetables", roi: "₹65L Annual", desc: "Converted 5 acres of arid land into a high-tech export hub for iceberg lettuce." },
-                        { location: "Karnataka", crop: "Integrated Poultry & Fruit", roi: "3.5x Yield Boost", desc: "Implemented circular farming cycles to eliminate fertilizer costs entirely." },
-                        { location: "Rajasthan", crop: "Hydroponic Berry Farm", roi: "₹1.2Cr Annual", desc: "Climate-controlled production of premium berries for the Delhi-NCR market." }
+                        { location: "MP", crop: "Integrated Farming", roi: "8x Income Boost", desc: "32 acres of land optimized with high-yield integrated systems for an expected 8-fold boost in annual income." }
                     ].map((study, i) => (
                         <div key={i} className="roi-card glass" style={{ textAlign: 'left', padding: '2.5rem' }}>
                             <div className="hero-badge">{study.location}</div>

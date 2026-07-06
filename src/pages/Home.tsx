@@ -59,9 +59,9 @@ export const Home = () => {
                                 <a href="#land-area" className="btn btn-outline btn-large">See How It Works</a>
                             </div>
                             <div className="hero-metrics animate-up visible delay-3">
-                                <div className="hero-metric"><span className="metric-val">12+</span> <span className="metric-label">States</span></div>
+                                <div className="hero-metric"><span className="metric-val">2</span> <span className="metric-label">States</span></div>
                                 <div className="hero-divider" />
-                                <div className="hero-metric"><span className="metric-val">₹250Cr+</span> <span className="metric-label">Asset Value Managed</span></div>
+                                <div className="hero-metric"><span className="metric-val">₹20Cr+</span> <span className="metric-label">Asset Value Managed</span></div>
                                 <div className="hero-divider" />
                                 <div className="hero-metric"><span className="metric-val">24/7</span> <span className="metric-label">IoT Monitoring</span></div>
                             </div>
